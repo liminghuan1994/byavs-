@@ -7,10 +7,11 @@ import org.apache.shiro.util.ByteSource;
 
 import com.byavs.entity.User;
 
+
 /**
- * @Auther: cpb
- * @Date: 2018/8/10 10:57
- * @Description:
+ * @author Byavs
+ *
+ * 2018年12月25日
  */
 public class PasswordHelper {
 

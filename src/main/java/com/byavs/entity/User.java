@@ -1,100 +1,161 @@
 package com.byavs.entity;
 
-import javax.persistence.*;
+import java.util.Date;
 
-/**
- * @Auther: cpb
- * @Date: 2018/8/10 10:17
- * @Description:
- */
-@Entity
-@Table(name = "sys_user", schema = "shiro", catalog = "")
 public class User {
-    @Id
-    private long id;
-    private String username;
+    private Integer userId;
+
+    private Integer groupId;
+
+    private String userName;
+
     private String password;
-    private String salt;
-    private Byte locked;
 
-    @Basic
-    @Column(name = "id")
-    public long getId() {
-        return id;
+    private Date loginTime;
+
+    private Date lastLoginTime;
+
+    private Integer loginStatus;
+
+    private String ip;
+
+    private Byte isBan;
+
+    private Byte enable;
+
+    private Integer creator;
+
+    private Date createTime;
+
+    private Integer modify;
+
+    private Date modifyTime;
+
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    @Basic
-    @Column(name = "username")
-    public String getUsername() {
-        return username;
+    public Integer getGroupId() {
+        return groupId;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setGroupId(Integer groupId) {
+        this.groupId = groupId;
     }
 
-    @Basic
-    @Column(name = "password")
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
+    }
+
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
     }
 
-    @Basic
-    @Column(name = "salt")
-    public String getSalt() {
-        return salt;
+    public Date getLoginTime() {
+        return loginTime;
     }
 
-    public void setSalt(String salt) {
-        this.salt = salt;
+    public void setLoginTime(Date loginTime) {
+        this.loginTime = loginTime;
     }
 
-    @Basic
-    @Column(name = "locked")
-    public Byte getLocked() {
-        return locked;
+    public Date getLastLoginTime() {
+        return lastLoginTime;
     }
 
-    public void setLocked(Byte locked) {
-        this.locked = locked;
+    public void setLastLoginTime(Date lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        User user = (User) o;
-
-        if (id != user.id) return false;
-        if (username != null ? !username.equals(user.username) : user.username != null) return false;
-        if (password != null ? !password.equals(user.password) : user.password != null) return false;
-        if (salt != null ? !salt.equals(user.salt) : user.salt != null) return false;
-        if (locked != null ? !locked.equals(user.locked) : user.locked != null) return false;
-
-        return true;
+    public Integer getLoginStatus() {
+        return loginStatus;
     }
 
-    @Override
-    public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
-        result = 31 * result + (username != null ? username.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (salt != null ? salt.hashCode() : 0);
-        result = 31 * result + (locked != null ? locked.hashCode() : 0);
-        return result;
+    public void setLoginStatus(Integer loginStatus) {
+        this.loginStatus = loginStatus;
     }
 
-    //验证盐
-    public String getCredentialsSalt() {
-        return username + salt;
+    public String getIp() {
+        return ip;
     }
+
+    public void setIp(String ip) {
+        this.ip = ip == null ? null : ip.trim();
+    }
+
+    public Byte getIsBan() {
+        return isBan;
+    }
+
+    public void setIsBan(Byte isBan) {
+        this.isBan = isBan;
+    }
+
+    public Byte getEnable() {
+        return enable;
+    }
+
+    public void setEnable(Byte enable) {
+        this.enable = enable;
+    }
+
+    public Integer getCreator() {
+        return creator;
+    }
+
+    public void setCreator(Integer creator) {
+        this.creator = creator;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Integer getModify() {
+        return modify;
+    }
+
+    public void setModify(Integer modify) {
+        this.modify = modify;
+    }
+
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
+
+	public void setSalt(String hex) {
+		
+	}
+
+	public byte[] getCredentialsSalt() {
+		return null;
+	}
+
+	public String getUsername() {
+		return null;
+	}
+
+	public Object getLocked() {
+		return null;
+	}
 }

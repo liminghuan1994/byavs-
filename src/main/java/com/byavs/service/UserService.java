@@ -15,17 +15,15 @@ import com.byavs.mapper.UserMapper;
  */
 
 @Service
-public class UserService implements UserMapper{
+public class UserService {
 	
 	@Autowired
 	private UserMapper userMapper;
 	
-	@Override
 	public List<User> getAll() {
 		return userMapper.getAll();
 	}
 	
-	@Override
 	public User findByName(String userName) {
 		return userMapper.findByName(userName);
 	}

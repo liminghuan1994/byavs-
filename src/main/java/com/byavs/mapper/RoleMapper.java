@@ -2,11 +2,20 @@ package com.byavs.mapper;
 
 import java.util.List;
 
-/**
- * @Auther: cpb
- * @Date: 2018/8/2 09:46
- * @Description:
- */
+import com.byavs.entity.Role;
+
 public interface RoleMapper {
-    List<String> findRoles(String userName);
+    int deleteByPrimaryKey(Integer roleId);
+
+    int insert(Role record);
+
+    int insertSelective(Role record);
+
+    Role selectByPrimaryKey(Integer roleId);
+
+    int updateByPrimaryKeySelective(Role record);
+
+    int updateByPrimaryKey(Role record);
+
+	List<String> findRoles(String userName);
 }

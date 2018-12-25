@@ -14,12 +14,11 @@ import com.byavs.mapper.PermissionMapper;
  */
 
 @Service
-public class PermissionService implements PermissionMapper{
+public class PermissionService {
 	
 	@Autowired
 	private PermissionMapper permissionMapper;
 	
-	@Override
 	public List<String> findPermissions(String userName) {
 		return permissionMapper.findPermissions(userName);
 	}

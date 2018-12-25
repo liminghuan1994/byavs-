@@ -1,13 +1,9 @@
 package com.byavs.mapper;
 
+import com.byavs.entity.UserRole;
 
-
-/**
- * @Auther: cpb
- * @Date: 2018/8/2 09:46
- * @Description:
- */
 public interface UserRoleMapper {
+    int insert(UserRole record);
 
-
+    int insertSelective(UserRole record);
 }

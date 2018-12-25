@@ -15,13 +15,12 @@ import com.byavs.mapper.RoleMapper;
  */
 
 @Service
-public class RoleService implements RoleMapper{
+public class RoleService {
 	
 	@Autowired
 	private RoleMapper roleMapper;
 	
 
-	@Override
 	public List<String> findRoles(String userName) {
 		return roleMapper.findRoles(userName);
 	}

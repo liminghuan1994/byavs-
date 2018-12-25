@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.byavs.util.R;
 import java.io.IOException;
 
+/**
+ * @author Byavs
+ *
+ * 2018年12月21日
+ */
 @Controller
 public class HomeController {
     @RequestMapping({"/","/index"})

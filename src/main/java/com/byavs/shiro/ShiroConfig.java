@@ -17,11 +17,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 
-/**
- * @Auther: cpb
- * @Date: 2018/8/10 11:32
- * @Description:
- */
 @Configuration
 public class ShiroConfig {
 
