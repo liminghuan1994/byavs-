@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 import com.byavs.mapper.PermissionMapper;
 import com.byavs.mapper.RoleMapper;
 
-/**
- * @Auther: cpb
- * @Date: 2018/8/10 10:39
- * @Description:
- */
 
+/**
+ * @author Byavs
+ *
+ * 2018年12月26日
+ */
 @Service
 public class RoleService {
 	

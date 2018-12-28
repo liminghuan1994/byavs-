@@ -17,6 +17,11 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 
+/**
+ * @author Byavs
+ *
+ * 2018年12月26日
+ */
 @Configuration
 public class ShiroConfig {
 

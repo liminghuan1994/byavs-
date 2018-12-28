@@ -5,6 +5,11 @@ import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * @author Byavs
+ *
+ * 2018年12月28日
+ */
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -38,7 +43,17 @@ public class UserController {
      */
     @RequestMapping("/userUpdate")
     @RequiresPermissions("user:update")//权限管理;
-    public String userDel(){
-        return "userInfoDel";
+    public String userUpd(){
+        return "userInfoUpd";
     }
+    /**
+     * 用户删除;
+     * @return
+     */
+    @RequestMapping("/userDelete")
+    @RequiresPermissions("user:delete")//权限管理;
+    public String userDel() {
+    	return "userInfoDel";
+    } 
+    
 }

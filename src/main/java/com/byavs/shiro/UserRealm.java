@@ -18,9 +18,9 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @Auther: cpb
- * @Date: 2018/8/10 10:36
- * @Description:
+ * @author Byavs
+ *
+ * 2018年12月26日
  */
 public class UserRealm extends AuthorizingRealm {
 
